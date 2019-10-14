@@ -1,0 +1,187 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+figure
+{
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+.centro
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header
+{
+    height: 70px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.header .centro
+{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-areas: "logo busqueda navegacion";
+    align-items: center;
+    height: inherit;
+}
+
+.headerLogo
+{
+    grid-area: logo;
+}
+
+.headerLogo img
+{
+    width: 100%;
+    height: auto;
+}
+
+.headerSearch
+{
+    grid-area: busqueda;
+    /* width: 250px; */
+    height: 25px;
+    margin: 0 auto;
+    padding-left: 18%;
+}
+
+.headerNav
+{
+    grid-area: navegacion;
+}
+
+.headerNav ul
+{
+    display: flex;
+    list-style: none;
+}
+
+.headerNav ul li a
+{
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.info
+{
+    height: 150px;
+    padding: 25px 0;
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: 200px 500px;
+    justify-content: center;
+}
+
+.infoImg
+{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.infoImg img
+{
+    border-radius: 50%;
+    height: 100%;
+    width: auto;
+}
+
+
+.infoFirst,
+.infoSecond,
+.infoThird
+{
+    padding-left: 10%;
+}
+
+.infoFirst
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    align-items: flex-end;
+}
+
+.infoFirst h1
+{
+    font-weight: 100;
+    margin: 0;
+}
+
+.infoFirst h1,
+.infoFirst .btnEditInfo
+{
+    margin-right: 20px;
+}
+
+.btnEditInfo,
+.btnConfig
+{
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid #dcdcdc;
+    padding: 5px;
+    color: #747474;
+    border-radius: 2px;
+}
+
+.infoSecond
+{
+    display: flex;
+    align-items: center;
+    grid-column: 2 / 3;
+    grid-row: 2 / span 1;
+}
+
+.infoSecond p
+{
+    margin: 0;
+    margin-right: 10px;
+}
+
+.amountPost,
+.amountFollowers,
+.amountFollows
+{
+    font-weight: 550;
+}
+
+.amountPost::after,
+.amountFollowers::after,
+.amountFollows::after
+{
+    content: ' ';
+}
+
+.infoThird
+{
+    grid-column: 2 / 3;
+    grid-row: 3/4;
+    align-self: start;
+}
+
+.infoName
+{
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.infoDescription
+{
+    margin: 0;
+}
+
